@@ -1,11 +1,9 @@
-import express, { Request, Response } from 'express'
+import express from 'express'
+import { createShortUrl } from "../controller/shortURL.controller"
 
 const router = express.Router()
 
-router.get("/healthcheck", (req: Request, res: Response) => {
-    return res.send("App working")
-})
-
+router.post("/", createShortUrl)
 
 
 export { router as mainRouter }
