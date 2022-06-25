@@ -15,7 +15,7 @@ const schema = new mongoose.Schema({
         required: true,
         default: () => nanoid(),
     },
-    destinantion: {
+    destination: {
         type: String,
         required: true
     }
