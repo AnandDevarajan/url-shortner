@@ -12,7 +12,7 @@ const validateResource = (resourceSchema: AnyObjectSchema) => async (
         })
         next()
     } catch (e) {
-        return res.status(401)
+        return res.status(400)
     }
 }
 
