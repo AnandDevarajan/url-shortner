@@ -1,7 +1,7 @@
 import express from 'express'
 import config from 'config'
 import dbConnect from "../config/db"
-import { mainRouter } from '../routes/routes'
+import { mainRouter } from './routes/routes'
 import 'dotenv/config'
 
 const port = config.get('port')
