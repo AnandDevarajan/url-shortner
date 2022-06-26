@@ -5,8 +5,10 @@ import shortUrlSchema from '../schemas/shortUrlSchema'
 
 const router = express.Router()
 
-router.post("/", validateResource(shortUrlSchema), createShortUrl)
-router.get("/:shortId", handleRedirect)
 router.get("/analytics", getAnalytics)
+router.get("/:shortId", handleRedirect)
+router.post("/", validateResource(shortUrlSchema), createShortUrl)
+
+
 
 export { router as mainRouter }

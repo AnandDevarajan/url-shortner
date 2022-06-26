@@ -5,8 +5,6 @@ import { ShortURL } from "./shortURL.model";
 interface Analytics extends Document {
     shortUrl: ShortURL
 }
-
-
 const schema = new mongoose.Schema({
     shortUrl: {
         type: mongoose.Schema.Types.ObjectId,
