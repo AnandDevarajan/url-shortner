@@ -1,21 +1,15 @@
-import { Box } from "@chakra-ui/react";
-import React from "react";
-import Background from "./components/Background";
-import URLShortnerForm from "./components/URLShortnerForm";
+import HomeContainer from "./containers/Home";
+import HandleRedirectContainer from "./containers/HandleRedirect";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Box
-        height="100%"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <URLShortnerForm />
-        <Background />
-      </Box>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeContainer />} />
+        <Route path="/:shortId" element={<HandleRedirectContainer />} />
+      </Routes>
+    </Router>
   );
 }
 
