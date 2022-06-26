@@ -18,14 +18,16 @@ const URLShortnerForm = () => {
   };
 
   return (
-    <Box pos="relative">
+    <Box pos="relative" zIndex="2" backgroundColor="white" padding="6">
       <form onSubmit={handleSubmit}>
-        <Input
-          onChange={(e: any) => setDestination(e.target.value)}
-          placeholder="https://www.expample.com"
-        />
+        <InputGroup>
+          <Input
+            onChange={(e: any) => setDestination(e.target.value)}
+            placeholder="https://www.expample.com"
+          />
 
-        <Button type="submit">CREATE SHORT URL</Button>
+          <Button type="submit">CREATE</Button>
+        </InputGroup>
       </form>
 
       {shortUrl && (

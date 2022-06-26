@@ -1,10 +1,20 @@
+import { Box } from "@chakra-ui/react";
 import React from "react";
+import Background from "./components/Background";
 import URLShortnerForm from "./components/URLShortnerForm";
 
 function App() {
   return (
     <div className="App">
-      <URLShortnerForm />
+      <Box
+        height="100%"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <URLShortnerForm />
+        <Background />
+      </Box>
     </div>
   );
 }
